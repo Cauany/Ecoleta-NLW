@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="./public/global.css">
+    <link rel="stylesheet" href="./public/create-point.css">
+    <link rel="stylesheet" href="./public/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar um ponto de coleta</title>
+</head>
+<body>
+    <div id="page-create-pointer">
+        <header>
+            <img src="./public/assets/logo.svg" alt="Logo Ecoleta">
+            <a href="#" target="_blank">
+                <span></span>
+                Voltar para home
+            </a>
+        </header>
+
+        <form action="">
+            <h1> Cadastro do ponto de coleta</h1>
+
+            <fieldset>
+                <legend>
+                    <h2> Dados da entidade </h2>
+                </legend>
+
+                <div class="field">
+                    <label for="name"> Nome da entidade</label>
+                    <input type="text" name="name">
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address">
+                    </div>
+                    <div class="field">
+                        <label for="address2">Número/Complemento</label>
+                        <input type="text" name="address2">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="state">Estado</label>
+                        <select name="uf">
+                            <option value="">Selecione o Estado</option>
+                        </select>
+
+                        <input type="hidden" name="state">
+                    </div>
+
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+            </fieldset>
+            <button type="submit"> Cadastrar ponto de coleta</button>
+        </form>
+    </div>
+
+    <script src="./public/main.js"></script>
+</body>
+</html>
