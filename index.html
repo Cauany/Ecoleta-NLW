@@ -3,7 +3,10 @@
 <head>
     <link rel="stylesheet" href="./public/global.css">
     <link rel="stylesheet" href="./public/home-page.css">
+    <link rel="stylesheet" href="./public/modal.css">
+    
     <link rel="stylesheet" href="./public/responsive.css">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecoleta</title>
@@ -24,7 +27,7 @@
 
                 <p> Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
                 
-                <a href="#" target="_blank"> 
+                <a href="#"> 
                     <span></span>
                     <strong>
                         Pesquisar pontos de coleta.
@@ -33,5 +36,26 @@
             </main>
         </div>
     </div>
+
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1> Pontos de Coleta </h1>
+                <a href="#" id="close"> Fechar </a>
+            </div>
+
+            <form action="">
+                <label for="search"> Cidade </label>
+                <div class="search field">
+                    <input type="text" name="search" placeholder="Pesquise por cidade">
+                    <button>
+                        <img src="./public/assets/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./public/main.js"></script>
 </body>
 </html>
