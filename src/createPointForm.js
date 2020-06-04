@@ -1,19 +1,17 @@
+//Funções 
 const selectUf = document.querySelector('select[name=uf]')
 const itemsToCollect = document.querySelectorAll('.items-grid li')
 const collectedItems = document.querySelector('input[name=items]')
-const buttonSearch = document.querySelector('#page-home main a')
-const modal = document.querySelector('#modal')
-const close = document.querySelector('#close')
 let selectedItems = []
 
-buttonSearch.addEventListener('click', ()=>{
-    modal.classList.remove('hide')
-})
 
-close.addEventListener('click', ()=>{
-    modal.classList.add('hide')
-})
 
+for(item of itemsToCollect){
+    item.addEventListener('click', handleSelectedItem)
+}
+
+populateUFs()
+selectUf.addEventListener('change', getCities) 
 
 function populateUFs(){
     fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
@@ -36,14 +34,14 @@ function getCities(event){
 
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
-    selectCity.innerHTML = 'option value=""> Selecione a Cidade</option>'
+    selectCity.innerHTML = 'option value> Selecione a Cidade</option>'
     selectCity.disabled = true
 
     fetch(url)
         .then(res => res.json())
         .then(cities => {
             for(city of cities){
-                selectCity.innerHTML += `<option value=${city.nome}> ${city.nome} </option>`
+                selectCity.innerHTML += `<option value="${city.nome}"> ${city.nome} </option>`
             }
 
             selectCity.disabled = false
@@ -78,11 +76,7 @@ function handleSelectedItem(event){
         selectedItems.push(itemId)
     }
     collectedItems.value = selectedItems
-    console.log(selectedItems)
 }
 
-for(item of itemsToCollect){
-    item.addEventListener('click', handleSelectedItem)
-}
-populateUFs()
-selectUf.addEventListener('change', getCities)
+
+
