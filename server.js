@@ -1,11 +1,11 @@
 const express = require('express')
 const api = express()
 
-api.use(express.static('src'))
+api.use(express.static('public'))
 
 
 api.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html')
+    res.sendFile(__dirname + '/src/index.html')
 })
 
 
