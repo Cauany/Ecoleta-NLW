@@ -24,7 +24,7 @@ div#modal .header{
 }
 
 div#modal .header a {
-    background-image: url('./assets/x.svg');
+    background-image: url('../src/assets/x.svg');
     width: 20px;
     height: 20px;
 

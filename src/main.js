@@ -20,7 +20,7 @@ function populateUFs(){
         .then(res => res.json())
         .then(states => {
             for(state of states){
-                selectUf.innerHTML += `<option value=${state.id}> ${state.nome} </option>`
+                selectUf.innerHTML += `<option value="${state.id}"> ${state.nome} </option>`
             }
         }
     )
