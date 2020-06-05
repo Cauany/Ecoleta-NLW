@@ -42,10 +42,20 @@
 
 #page-create-pointer form legend{
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #page-create-pointer form legend h2{
     font-size: 24px;
+}
+
+#page-create-pointer form legend span{
+    font-size: 14px;
+    opacity: 0.7;
+    color: var(--title-color);
 }
 
 #page-create-pointer form .field{

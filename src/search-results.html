@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="search-results.css">
-    <link rel="stylesheet" href="responsive.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar um ponto de coleta</title>
-</head>
-<body>
-    <div id="page-search-results">
-        <header>
-            <img src="assets/logo.svg" alt="Logo Ecoleta">
-            <a href="/">
-                <span></span>
-                Voltar para home
-            </a>
-        </header>
+{% extends 'page/layout.html' %}
+
+{% set pageId = 'page-search-results' %}
+
+    {% block title %}
+        <title>Criar um ponto de coleta</title>
+    {% endblock title %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="search-results.css">
+    {% endblock styles %}
+    
+    {% block content %}
+        {% include 'page/header.html' %}
 
         <main>
             <h4>
@@ -48,5 +43,4 @@
                 </div>
             </div>
         </main>
-</body>
-</html>
+    {% endblock content %}

@@ -28,6 +28,14 @@
     #page-search-results .cards img{
         height: 200px;
     }
+
+    #page-create-pointer .field-group{
+        flex-direction: column;
+    }
+
+    #page-create-pointer .field-group .field + .field{
+        margin-left: 0;
+    }
 }
 
 /* --Configurando responsividade Tablet */

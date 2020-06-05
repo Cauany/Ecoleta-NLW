@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="home-page.css">
-    <link rel="stylesheet" href="modal.css">
+{% extends 'page/layout.html' %}
+
+{# Constante #}
+{% set pageId = 'page-home' %}
+{#  Conteudo #}
+    <title> Ecoleta </title>
+
+    {% block styles %}
+        <link rel="stylesheet" href="home-page.css">
+        <link rel="stylesheet" href="modal.css">
+    {% endblock styles %}
     
-    <link rel="stylesheet" href="responsive.css">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
-</head>
-<body>
-    <div id="page-home">
+    {% block content %}
         <div class="content">
             <header>
                 <img src="assets/logo.svg" alt="Logo Ecoleta">
-                <a href="create-point.html">
+                <a href="/create-point">
                     <span></span>
                     Cadastre um ponto de coleta
                 </a>
@@ -35,27 +33,12 @@
                 </a>
             </main>
         </div>
-    </div>
+    {% endblock content %}
 
-    <div id="modal" class="hide">
-        <div class="content">
-            <div class="header">
-                <h1> Pontos de Coleta </h1>
-                <a href="#" id="close"> Fechar </a>
-            </div>
+    {% block modal %}
+        {% include 'page/modal.html'%}
+    {% endblock modal %}
 
-            <form action="">
-                <label for="search"> Cidade </label>
-                <div class="search field">
-                    <input type="text" name="search" placeholder="Pesquise por cidade">
-                    <button>
-                        <img src="assets/search.svg" alt="Buscar">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script src="indexModal.js"></script>
-</body>
-</html>
+    {% block scripts %}
+        <script src="indexModal.js"></script>
+    {% endblock scripts %}
