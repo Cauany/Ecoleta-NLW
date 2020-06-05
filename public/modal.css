@@ -85,3 +85,14 @@ div#modal form button:hover{
     opacity: 0;
     visibility: hidden;
 }
+
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1{
+    color: white;
+    margin-top: 32px;
+}
