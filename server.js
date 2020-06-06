@@ -60,14 +60,23 @@ api.post('/create-point', (req, res) => {
 })
 
 api.get('/search', (req,res) => {
-    db.all(` SELECT * FROM places`, function(err, rows){
+
+    const search = req.query.search
+
+    if(search == ''){
+        return res.render('search-results.html', { total: 0 })
+    }
+
+    db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows){
         if(err){
             return console.log(err)
         }
-
+        
         const total = rows.length
         return res.render('search-results.html', { places: rows, total })
     })
+
+    
 
 })
 
