@@ -28,6 +28,5 @@ btnDarkMode.onclick = () => {
         img.setAttribute('src', 'assets/logo.svg')
 
     }
-
 }
 
