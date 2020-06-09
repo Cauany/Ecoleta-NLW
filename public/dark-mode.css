@@ -1,0 +1,41 @@
+/* --- Style Button --- */
+div.mode{
+    position: fixed;
+    right: 15px;
+    top: 10px;
+}
+
+div.dark-mode{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    top: 1%;
+    right: 25px;
+    background: rgb(92, 92, 92);
+    box-shadow: 1px 2px 3px grey;
+    width: 55px;
+    height: 30px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+div.dark-mode span{
+    top: 4px;
+    left: 3px;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: rgba(0, 0, 0, 0.74);
+    border-radius: 50%;
+}
+
+/* --- Style Dark Mode --- */
+div.dark{
+    background: rgb(179, 179, 179);
+    cursor: pointer;
+    transform: 600ms;
+    box-shadow: 1px 2px 3px rgb(53, 52, 52);
+}
+
+
+

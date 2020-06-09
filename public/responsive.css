@@ -1,4 +1,11 @@
 /* --Configurando responsividade Smartphone */
+
+@media(max-width:760px){
+    #page-home{
+        background-position-y: 200vw;
+    }
+}
+
 @media(max-width: 900px){
     #page-home{
         background-position: 90vw;
@@ -80,12 +87,6 @@
 @media(min-width: 1700px){
     #page-home{
         background-position-x: 40vw;
-    }
-}
-
-@media(max-width:760px){
-    #page-home{
-        background-position-y: 200vw;
     }
 }
 
